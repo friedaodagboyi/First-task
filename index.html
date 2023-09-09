@@ -46,6 +46,7 @@
             // Get current date and time
             const currentDate = new Date();
             const dayOfWeek = currentDate.toLocaleDateString("en-US", { weekday: "long" });
+            const utcTime = currentDate.getTime();
 
             // Format time as "hh:mm AM/PM"
             //const hours = currentDate.getHours() % 12 || 12; // Convert to 12-hour format
@@ -59,11 +60,6 @@
             document.getElementById("utcTime").textContent = `Current UTC Time: ${utcTime}`;
         });
     </script>
-
-            // Update elements with dynamic content
-            document.getElementById("dayOfWeek").textContent = `Current Day of the Week: ${dayOfWeek}`;
-            document.getElementById("currentTime").textContent = `Current Time: ${currentTime}`;
-        });
-    </script>
+    
 </body>
 </html>
